@@ -1,0 +1,12 @@
+<h1>Bien venidos al carrito</h1>
+
+
+
+<p>Carrito de compras</p>
+<ul class="list" *ngFor="let runner of (ShopList$ | async) ">
+    <li >
+        Fecha {{runner.diaMes|date}}-
+        Localidad {{runner.Localidad}}-
+        {{runner.cantidad}}-Total{{runner.precio*runner.cantidad}}
+    </li>
+</ul>
