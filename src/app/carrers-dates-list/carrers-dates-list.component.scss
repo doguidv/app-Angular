@@ -15,8 +15,13 @@ img{
 
   .contenedorCateg{
     display: flex;
-    background-color: azure;
+    flex-direction: row;
   }
+  .CategHombres{
+    padding: auto;
+    margin:   8px ;
+  }
+  
    thead{
     background-color: aquamarine;
   }

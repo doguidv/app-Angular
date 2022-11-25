@@ -15,4 +15,5 @@ export class CartComponent {
   constructor(private shop: RunnerShopService){
     this.ShopList$ = shop.ShopList.asObservable();
    }
+   
 }

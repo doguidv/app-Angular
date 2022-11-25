@@ -1,29 +1,31 @@
 
 
 <div class="contenedorCateg">
-    <div class="CateHombres">
-        <h2>Categoria Hombres </h2>
-        <p>PROMOCIONALES A - hasta 39 años</p>
-        <p>PROMOCIONALES B- 40 años y +</p>
-        <p>INFANTILES - 13 Y 14 años</p>
-        <p>CADETES - 15 y 16 años</p>
-        <p>JUVENILES  - 17 y 18 años</p>
-        <p>SUB 23 - 19 A 22 años</p>
-        <p>EBIKE - Unica</p>
-    </div>
+<div    class="CategHombres"> 
+   <ul class="list-group list-group-flush">
+            <h2>Categoria Hombres </h2>
+  <li class="list-group-item">PROMOCIONALES A - hasta 39 años</li>
+  <li class="list-group-item">PROMOCIONALES B- 40 años y +</li>
+  <li class="list-group-item">INFANTILES - 13 Y 14 años</li>
+  <li class="list-group-item">CADETES - 15 y 16 años</li>
+  <li class="list-group-item">JUVENILES  - 17 y 18 años</li>
+  <li class="list-group-item">SUB 23 - 19 A 22 años</li>
+  <li class="list-group-item">EBIKE - Unica</li>
+</ul>
 </div>
-
-<div class="contenedorCateg">
-    <div class="CateMujeres">
+<div class="CategMujeres">
+    <ul class="list-group list-group-flush">
         <h2>Categoria Mujeres </h2>
-        <p>ELITE  – hasta 34 años</p>
-        <p>MASTER A - de 35 a 44 años</p>
-        <p>MASTER B - 45 años en adelante </p>
-    </div>
-    
+    <li class="list-group-item">ELITE  – hasta 34 años</li>
+    <li class="list-group-item">MASTER A - de 35 a 44 años</li>
+    <li class="list-group-item">MASTER B - 45 años en adelante </li>
+</ul>
+</div>
 </div>
 
-<h1>Fechas Carreras</h1>
+
+    <h1>Fechas Carreras</h1>
+
 
 <div  class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
     <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
@@ -35,10 +37,10 @@
        <p> {{runner.precio | currency}}</p>
         <p>{{runner.Cupo}}</p>
         <img  [src]="runner.Circuitoimg" [alt]="runner.Circuitonombre">
-           <app-input-number *ngIf="runner.Disponible" [(contador)]="runner.cantidad" [max]="runner.Cupo" (maxReached)="maxReached($event)" >
-           </app-input-number>
+     <!--      <app-input-number *ngIf="runner.Disponible" [(contador)]="runner.cantidad" [max]="runner.Cupo" (maxReached)="maxReached($event)" >
+           </app-input-number>-->
        <button  class="btn" *ngIf="runner.Disponible"  (click)="addToCart(runner)">Solicitar Inscripcion</button>
-      <button class="btn"> <a  class="nav-link" [routerLink]="['/runners']" >Ver Carrito</a></button>
+      <button *ngIf="runner.cantidad" class="btn"> <a  class="nav-link" [routerLink]="['/runners']" >Ver Carrito</a></button>
     </label>
     </div>
   </div>

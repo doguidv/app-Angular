@@ -22,9 +22,10 @@ export class CarrersDatesListComponent {
       .subscribe(runners => this.runners=runners);
   }
   addToCart(runners:runners){
+    runners.cantidad  = 1;
     this.shop.addToCart(runners);
     runners.Cupo-=runners.cantidad;
-    runners.cantidad=0;
+   
   }
  maxReached( m:string ){
   alert(m);

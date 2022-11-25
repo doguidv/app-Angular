@@ -20,7 +20,7 @@ export class InputNumberComponent {
 
 
   upCantidad():void{
-    if(this.contador<this.max){
+    if(this.contador  < this.max){
       this.contador++;
       this.contadorChange.emit( this.contador);
     }

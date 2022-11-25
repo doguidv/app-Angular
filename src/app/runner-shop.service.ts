@@ -14,7 +14,7 @@ export class RunnerShopService {
   ShopList: BehaviorSubject<runners[]>= new BehaviorSubject(this._ShopList);
 
   constructor(){}
-  addToCart(runner:runners) {
+    addToCart(runner:runners) {
 
    let item= this._ShopList.find((v1) =>v1.Localidad == runner.Localidad);
 
